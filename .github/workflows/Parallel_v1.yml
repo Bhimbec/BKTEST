@@ -25,3 +25,5 @@ jobs:
         run: Write-Output "Windows String"
       - name: Error Step
         run: Write-Output "Windows String1111"
+      - name: Error Step v1 
+        run: Write-Output "Windows String2014"
