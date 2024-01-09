@@ -24,4 +24,4 @@ jobs:
       - name: echo a string
         run: Write-Output "Windows String"
       - name: Error Step
-        run: Write-Output "Windows String1"
+        run: Write-Output "Windows String1111"
