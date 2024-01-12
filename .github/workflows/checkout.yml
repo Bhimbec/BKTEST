@@ -6,7 +6,7 @@ jobs:
     runs-on: Ubuntu-latest
     steps:
       - name:  List files 
-        run: ls-a          
+        run: ls         
       - name:  Checkout
         run: |
           git init
