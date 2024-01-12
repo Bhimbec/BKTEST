@@ -1,14 +1,18 @@
 name: checkoout repo
 on: [push]
 
-jobs: 
-  checkout-git-repo-and-display-files:
+jobs:
+  Checkout-repo_and_list_files:
     runs-on: Ubuntu-latest
     steps:
-      -name: list files before
-          run: ls
-      -name: checkout
+      - name:  List files 
+        run: ls-a
+          pwd
+      - name:  Checkout
         run: |
+          git init
+          git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git fetch origin
+          git checkout main
         
-  
 
