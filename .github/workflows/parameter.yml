@@ -1,0 +1,6 @@
+name: Workflow Commands
+on: [push]
+
+jobs:
+  generate-a-secret-output:
+    runs-on: ubuntu-latest
