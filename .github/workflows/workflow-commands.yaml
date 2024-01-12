@@ -2,7 +2,7 @@ name: Workflow Commands
 on: [push]
 
 jobs: 
-  testing workflow commands:
+  testing-wf-commands:
     runs-on: Ubuntu-latest
     steps: 
       - name: setting error message 
