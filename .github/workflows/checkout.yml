@@ -1,0 +1,14 @@
+name: checkoout repo
+on: [push]
+
+jobs: 
+  checkout-git-repo-and-display-files:
+    runs-on: Ubuntu-latest
+    steps:
+      -name: list files before
+          run: ls
+      -name: checkout
+        run: |
+        
+  
+
