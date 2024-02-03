@@ -1,5 +1,5 @@
 name: Expressions and Context
-on: [push,pull_request, issues, workflow_dispach]
+on: [push,pull_request, issues, workflow_dispatch]
 
 jobs: 
   using-expressions-and-context:
