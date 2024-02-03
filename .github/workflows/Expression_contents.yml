@@ -1,0 +1,23 @@
+name: Expressions and Context
+on: [push,pull_request, issues, workflow_dispach]
+
+jobs: 
+  using-expressions-and-context:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Expressions
+        id: expressions
+        run: |
+          echo ${{ 1}}
+          echo ${{ 'this is string' }}
+          echo ${{ true }}
+          echo ${{ 2>5 }}
+          echo ${{ 'string' == 'String' }}
+      - name: Dunp contexts
+        steps: 
+          run: |
+            echo '${{ toJson(github) }}'
+            echo '${{ toJson(job) }}'
+            echo '${{ toJson(secrets) }}'
+            echo '${{ toJson(runner) }}'
+          
