@@ -14,8 +14,7 @@ jobs:
           echo ${{ 2>5 }}
           echo ${{ 'string' == 'String' }}
       - name: Dunp contexts
-        steps: 
-          run: |
+        run: |
             echo '${{ toJson(github) }}'
             echo '${{ toJson(job) }}'
             echo '${{ toJson(secrets) }}'
