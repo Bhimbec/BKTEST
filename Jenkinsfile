@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Welcome Step') {
-            steps { 
-                echo 'Welcome to LambdaTest'
+            steps {
+                script {
+                    git branch: 'main', url: 'https://github.com/Bhimbec/BKTEST.git'
+                }
             }
         }
     }
