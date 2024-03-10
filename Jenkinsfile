@@ -1,10 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Welcome Step') {
+        stage('Checkout') {
             steps {
                 script {
-                    git branch: 'main', url: 'https://github.com/Bhimbec/BKTEST.git'
+                    git branch: 'main', credentialsId: 'your-credentials-id', url: 'https://github.com/your/repository.git'
                 }
             }
         }
