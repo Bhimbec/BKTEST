@@ -1,0 +1,130 @@
+-- Compliance 
+-- apdex 
+-- NR removal 
+
+IAP<Pord>Publishr
+
+https://wiki.ith.intel.com/display/oneitmonitoring/Monitoring+Compliance+for+Dynatrace
+
+AEM_Clone_Repo_copy_file.sh
+
+
+AEM_rsync-pub-pub.sh
+
+
+
+#!/bin/bash
+/root/automation/AEM_rsync-pub-pub.sh src_server=devfmepaemps01.amr.corp.intel.com copy_mode=online start_local=false > /dev/null 2>&1
+
+
+AEM_Publisher_online_copy.sh
+
+
+
+gid = users
+read only = true
+use chroot = true
+transfer logging = true
+log format = %h %o %f %l %b
+log file = /var/log/rsyncd.log
+pid file = /var/run/rsyncd.pid
+#hosts allow = trusted.hosts
+slp refresh = 300
+use slp = false
+
+[data]
+        path=/data
+        comment=data
+        uid=aem
+        gid=aem
+        read only=yes
+        list=no
+        auth users=rsyncuser
+        secrets file=/etc/rsyncd.secrets
+        #hosts allow=10.11.120.0/255.255.255.0
+#[Example]
+#       path = /home/Example
+#       comment = An Example
+#       auth users = user
+#       secrets file = /etc/rsyncd.secrets
+
+
+EPPOC_AEM_Clone_Repo_copy_file_v1
+
+
+Take backup for rsyncd.conf file to /root/automation and then copy file rsyncd.conf from /tmp/clone_repo/ to /etc with permission -rw-r--r-- 
+
+Check service rsyncd status and if not running Start rsyncd service 
+
+systemctl status rsyncd.service  
+systemctl start rsyncd.service  
+
+Dispaly the message for each steps 
+
+
+AEM_Rsync_Config_Service.sh
+AEM_Rsync_Config_Service.yaml
+
+EPPOC_AEM_Rsync_Config_Service
+
+
+
+export RSYNC_PASSWORD="d1sastr0us"
+
+
+
+
+export RSYNC_PASSWORD="d1sastr0us"
+./AEM_rsync_pub_pub.sh devfmepaemps01.amr.corp.intel.com copy_mode=online start_local=false
+
+Mughalkhodfarm@2046
+
+ACL : from Destination to source machine 
+telnet devfmepaempoc02.amr.corp.intel.com 873
+
+
+SSH connection from source to destination 
+mkdir -p ./aem/.ssh
+
+
+
+
+systemctl restart sshd
+
+
+AEM_rsync_pub_pub.sh
+
+
+/automation
+
+
+ bash /root/automation/AEM_rsync-pub-pub.sh devfmepaemps01.amr.corp.intel.com copy_mode=online start_local=false > /dev/null 2>&1
+ 
+ 
+/root/automation/AEM_rsync_pub_pub.sh
+/root/automation/AEM_rsync-pub-pub.sh
+
+
+http://devfmepaempoc02.amr.corp.intel.com:4503/libs/granite/core/content/login.html
+
+
+http://devfmepaempoc02.amr.corp.intel.com:4503/libs/granite/core/content/login.html  
+
+AEM_Replication_queue.sh
+
+
+http://devfmepaemas01.amr.corp.intel.com:4502/etc/replication/agents.author/DEV_POC6.test.html
+Replication test succeeded
+
+curl -u admin:2HMxhW*4+V $http://devfmepaemas01.amr.corp.intel.com:4502/etc/replication/agents.author/DEV_POC6.test.html
+
+
+Requiements:
+4 to 5 years of experience
+•	Solid understanding of Linux server administration and scripting; Application trobleshooting, example : Tomcat,apache etc
+•	Knowledge on Windows envirnement, IIS Adminisrtaion, Troubleshooting related to application side
+•	Requires a mix of strategic engineering and design along with hands-on, technical work, analytical and problem-solving skills
+•	Proficient in one or more scripting languages (i.e. Python, PowerShell, Bash)   
+•	Knowledge and experience with Continuous Integration tools such as Jenkins, Githib Actions, etc. to design and create reliable releases of the software
+•	Deep understanding of and ability to debug standard networking protocols and components such as: HTTP, DNS, TCP/IP, ICMP and Load Balancing
+•	Basic Knowledge on AWS administration, Docker or Kubernetes	
