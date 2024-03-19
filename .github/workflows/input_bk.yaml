@@ -9,7 +9,7 @@ on:
     inputs:
       name: 
         Description: ' Person to greet'
-        default: 'world'
+        default: 'bk'
         required: true
 
 jobs: 
